@@ -7,5 +7,12 @@
             "email": "robicse11127@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Module\\": "modules/",
+            "Admin\\": "admin/",
+            "Front\\": "public/"
+        }
+    }
 }
