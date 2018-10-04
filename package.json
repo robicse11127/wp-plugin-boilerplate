@@ -1,0 +1,19 @@
+{
+  "name": "wp-plugin-boilerplate",
+  "version": "1.0.0",
+  "description": "A starter WordPress plugin development boilerplate",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robicse11127/wp-plugin-boilerplate.git"
+  },
+  "author": "Md Rabiul Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robicse11127/wp-plugin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/robicse11127/wp-plugin-boilerplate#readme"
+}
