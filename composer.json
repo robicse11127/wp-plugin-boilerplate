@@ -10,9 +10,9 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Module\\": "modules/",
-            "Admin\\": "admin/",
-            "Front\\": "public/"
+            "HR\\Helper\\": "helpers/",
+            "HR\\Admin\\": "admin/",
+            "HR\\Front\\": "public/"
         }
     }
 }

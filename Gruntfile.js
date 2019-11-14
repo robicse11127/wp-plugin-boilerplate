@@ -5,26 +5,25 @@ module.exports = function( grunt ) {
 
         // Setting folder templates
         dirs: {
-            adminDist: 'admin/assets/dist/',
-            adminSource: 'admin/assets/source/',
-            moduleSource: 'modules/',
-            publicDist: 'public/assets/dist/',
-            publicSource: 'public/assets/source/',
+            admin_dist: 'resources/admin/dist/',
+            admin_source: 'resources/admin/source/',
+            public_dist: 'resources/public/dist/',
+            public_source: 'resources/public/source/',
         },
 
         // Minify all css files
         cssmin: {
             options: {
-                mergeIntoShorthands: false
+                mergeIntoShorthands: false,
+                sourceMap: true,
             },
             target: {
                 files: {
-                    // Admin
-                    '<%= dirs.adminDist %>/css/admin.min.css': '<%= dirs.adminSource %>/css/admin.css',
-                    '<%= dirs.adminDist %>/css/sweetalert.min.css': '<%= dirs.adminSource %>/css/sweetalert.css',
-                    
-                    // Public
-                    '<%= dirs.publicDist %>/css/public.min.css': '<%= dirs.publicSource %>/css/public.css',
+                    '<%= dirs.admin_dist %>/css/admin.css': '<%= dirs.admin_source %>/css/admin.css',
+                    '<%= dirs.admin_dist %>/css/admin.min.css': '<%= dirs.admin_dist %>/css/admin.css',
+                
+                    '<%= dirs.public_dist %>/css/public.css': '<%= dirs.public_source %>/css/public.css',
+                    '<%= dirs.public_dist %>/css/public.min.css': '<%= dirs.public_dist %>/css/public.css',
                 }
             }
         },
@@ -36,18 +35,8 @@ module.exports = function( grunt ) {
             },
             my_target: {
                 files: {
-                    // Admin
-                    '<%= dirs.adminDist %>/js/admin.min.js': [
-                        '<%= dirs.adminSource %>/js/admin.js',
-                        
-                    ],
-                    '<%= dirs.adminDist %>/js/sweetalert.min.js': [
-                        '<%= dirs.adminSource %>/js/sweetalert.js',
-                    ],
-
-                    // Public
-                    '<%= dirs.publicDist %>/js/public.min.js': [
-                        '<%= dirs.publicSource %>/js/public.js',
+                    '<%= dirs.admin_dist %>/js/admin.min.js': [
+                        '<%= dirs.admin_source %>/js/admin.js',
                     ],
                 }
             }
@@ -55,8 +44,8 @@ module.exports = function( grunt ) {
 
         // Watching all changes
         watcher: {
-            css: {
-                files: ['<%= dirs.adminSource %>/css/*.css', '<%= dirs.publicSource %>/css/*.css' ],
+            sass: {
+                files: ['<%= dirs.admin_source %>/css/**/*.css', '<%= dirs.public_source %>/css/**/*.css'],
                 tasks: ['cssmin'],
                 livereload: {
                     options: {
@@ -65,11 +54,7 @@ module.exports = function( grunt ) {
                 }
             },
             scripts: {
-                files: [
-                    '<%= dirs.adminSource %>/js/*.js', 
-                    '<%= dirs.publicSource %>/js/*.js',
-                    // '<%= dirs.moduleSource %>/**/assets/js/**/*.js',
-                ],
+                files: ['<%= dirs.admin_source %>/js/*.js'],
                 tasks: ['uglify']
             }
         },
@@ -79,10 +64,10 @@ module.exports = function( grunt ) {
             target: {
                 options: {
                     domainPath: '/languages/', // Where to save the POT file.
-                    potFilename: 'wp_plugin_boilerplate.pot', // Name of the POT file.
-                    type: 'wp-theme', // Type of project (wp-plugin or wp-theme).
+                    potFilename: 'wp-plugin-boilerplate.pot', // Name of the POT file.
+                    type: 'wp-plugin', // Type of project (wp-plugin or wp-theme).
                     potHeaders: {
-                        'report-msgid-bugs-to': 'http://kodebuzz.com/wp-plugin-boilerplate',
+                        'report-msgid-bugs-to': 'https://wpartisans.com',
                         'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
                     }
                 }
@@ -101,7 +86,6 @@ module.exports = function( grunt ) {
                     '**',
                     '!node_modules/**',
                     '!build/**',
-                    '!testing/**',
                     '!bin/**',
                     '!.git/**',
                     '!Gruntfile.js',
@@ -115,6 +99,7 @@ module.exports = function( grunt ) {
                     '!tests/**',
                     '!**/Gruntfile.js',
                     '!**/package.json',
+                    '!**/package-lock.json',
                     '!**/README.md',
                     '!**/export.sh',
                     '!**/*~'
@@ -143,14 +128,16 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-clean' );
     grunt.loadNpmTasks( 'grunt-contrib-copy' );
     grunt.loadNpmTasks( 'grunt-contrib-compress' );
-    grunt.loadNpmTasks( 'grunt-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-    grunt.loadNpmTasks( 'grunt-babel' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks('grunt-watcher');
+    grunt.loadNpmTasks( 'grunt-watcher' );
 
     grunt.registerTask( 'default', [
-        'cssmin', 'uglify', 'watcher'
+        'minifycss', 'minifyjs', 'watcher'
+    ]);
+
+    grunt.registerTask( 'dev', [
+        'watcher'
     ]);
 
     grunt.registerTask( 'minifycss', [

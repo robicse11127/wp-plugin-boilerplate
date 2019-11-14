@@ -7,38 +7,33 @@ namespace Composer\Autoload;
 class ComposerStaticInit156c960e106d38e50ad3b0ad278aef51
 {
     public static $prefixLengthsPsr4 = array (
-        'M' => 
+        'H' => 
         array (
-            'Module\\' => 7,
-        ),
-        'F' => 
-        array (
-            'Front\\' => 6,
-        ),
-        'A' => 
-        array (
-            'Admin\\' => 6,
+            'HR\\Helper\\' => 10,
+            'HR\\Front\\' => 9,
+            'HR\\Admin\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Module\\' => 
+        'HR\\Helper\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/modules',
+            0 => __DIR__ . '/../..' . '/helpers',
         ),
-        'Front\\' => 
+        'HR\\Front\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public',
         ),
-        'Admin\\' => 
+        'HR\\Admin\\' => 
         array (
             0 => __DIR__ . '/../..' . '/admin',
         ),
     );
 
     public static $classMap = array (
-        'Admin\\Admin' => __DIR__ . '/../..' . '/admin/admin.php',
-        'Admin\\Template' => __DIR__ . '/../..' . '/admin/templates/template.php',
+        'HR\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/Admin.php',
+        'HR\\Front\\Front' => __DIR__ . '/../..' . '/public/Front.php',
+        'HR\\Helper\\Helpers' => __DIR__ . '/../..' . '/helpers/Helpers.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
