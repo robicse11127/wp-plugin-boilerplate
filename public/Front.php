@@ -1,5 +1,5 @@
 <?php 
-namespace HR\Front;
+namespace WPPB\Front;
 
 class Front {
     /**
@@ -8,6 +8,11 @@ class Front {
      * @since 1.0.0
      */
     public function __construct() {
+
+        /**
+         * Init Modules
+         */
+
         /**
          * Loading Necessary Hooks
          */

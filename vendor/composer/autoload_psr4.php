@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'HR\\Helper\\' => array($baseDir . '/helpers'),
-    'HR\\Front\\' => array($baseDir . '/public'),
-    'HR\\Admin\\' => array($baseDir . '/admin'),
+    'WPPB\\Front\\' => array($baseDir . '/public'),
+    'WPPB\\Admin\\' => array($baseDir . '/admin'),
 );

@@ -1,5 +1,7 @@
 <?php 
-namespace HR\Admin;
+namespace WPPB\Admin;
+
+use WPPB\Admin\Modules\HelloWorld\HelloWorld;
 
 class Admin {
     /**
@@ -8,6 +10,12 @@ class Admin {
      * @since 1.0.0
      */
     public function __construct() {
+
+        /**
+         * Init Modules
+         */
+        $hello = new HelloWorld();
+
         /**
          * Loading Necessary Hooks
          */

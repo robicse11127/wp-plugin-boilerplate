@@ -1,11 +1,8 @@
 <?php 
-namespace HR\Helper;
-
-class Helpers {
-    /**
-     * Construct Function
-     */
-    public function __construct() {
-        
-    }
-}
+/**
+ * =============================================
+ * Helper Functions
+ * @author Rabiul
+ * @since 1.0.0
+ * =============================================
+ */

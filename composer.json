@@ -10,9 +10,8 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "HR\\Helper\\": "helpers/",
-            "HR\\Admin\\": "admin/",
-            "HR\\Front\\": "public/"
+            "WPPB\\Admin\\": "admin/",
+            "WPPB\\Front\\": "public/"
         }
     }
 }

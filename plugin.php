@@ -16,9 +16,8 @@
  */
 if( !defined( 'ABSPATH' ) ) exit();
 require_once 'vendor/autoload.php';
-use HR\Admin\Admin;
-use HR\Front\Front;
-use HR\Helper\Helpers;
+use WPPB\Admin\Admin;
+use WPPB\Front\Front;
 
 
 /**
@@ -26,10 +25,10 @@ use HR\Helper\Helpers;
  * 
  * @since 1.0.0
  */
-define( 'HR_VERISON', '1.0.0' );
-define( 'HR_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
-define( 'HR_PLUGIN_URL', trailingslashit(plugins_url('/', __FILE__)) );
-define( 'HR_PLUGIN_RESOURCE_URL', HR_PLUGIN_URL . 'resources' );
+define( 'WPPB_VERISON', '1.0.0' );
+define( 'WPPB_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
+define( 'WPPB_PLUGIN_URL', trailingslashit(plugins_url('/', __FILE__)) );
+define( 'WPPB_PLUGIN_RESOURCE_URL', HR_PLUGIN_URL . 'resources' );
 
 class WP_Plugin_Boilerplate {
 
@@ -39,7 +38,6 @@ class WP_Plugin_Boilerplate {
     public function __construct() {
         $admin      = new Admin();
         $front      = new Front();
-        $helpers    = new Helpers();
     }
 
 }
