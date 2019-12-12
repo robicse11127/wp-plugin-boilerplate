@@ -34,6 +34,7 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
         'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/Admin.php',
         'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => __DIR__ . '/../..' . '/admin/Modules/HelloWorld/HelloWorld.php',
         'WPPB\\Blocks\\Blocks' => __DIR__ . '/../..' . '/blocks/Blocks.php',
+        'WPPB\\Blocks\\HelloBlock\\HelloBlock' => __DIR__ . '/../..' . '/blocks/HelloBlock/HelloBlock.php',
         'WPPB\\Front\\Front' => __DIR__ . '/../..' . '/public/Front.php',
     );
 

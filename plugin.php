@@ -39,7 +39,7 @@ class WP_Plugin_Boilerplate {
     public function __construct() {
         $admin      = new Admin();
         $front      = new Front();
-        $bloc       = new Blocks();
+        $block      = new Blocks();
     }
 
 }

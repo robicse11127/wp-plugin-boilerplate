@@ -9,5 +9,6 @@ return array(
     'WPPB\\Admin\\Admin' => $baseDir . '/admin/Admin.php',
     'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => $baseDir . '/admin/Modules/HelloWorld/HelloWorld.php',
     'WPPB\\Blocks\\Blocks' => $baseDir . '/blocks/Blocks.php',
+    'WPPB\\Blocks\\HelloBlock\\HelloBlock' => $baseDir . '/blocks/HelloBlock/HelloBlock.php',
     'WPPB\\Front\\Front' => $baseDir . '/public/Front.php',
 );
