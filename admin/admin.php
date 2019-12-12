@@ -29,9 +29,9 @@ class Admin {
      */
     public function admin_styles_scripts() {
         // Styles
-        wp_enqueue_style( 'hr-admin', HR_PLUGIN_RESOURCE_URL . '/admin/dist/css/admin.min.css', array(), rand() );
+        wp_enqueue_style( 'hr-admin', WPPB_PLUGIN_RESOURCE_URL . '/admin/dist/css/admin.min.css', array(), rand() );
 
         // Scripts
-        wp_enqueue_script( 'hr-admin', HR_PLUGIN_RESOURCE_URL . '/admin/dist/js/admin.min.js', array('jquery'), rand(), true );
+        wp_enqueue_script( 'hr-admin', WPPB_PLUGIN_RESOURCE_URL . '/admin/dist/js/admin.min.js', array('jquery'), rand(), true );
     }
 }

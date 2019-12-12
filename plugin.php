@@ -28,7 +28,7 @@ use WPPB\Front\Front;
 define( 'WPPB_VERISON', '1.0.0' );
 define( 'WPPB_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)) );
 define( 'WPPB_PLUGIN_URL', trailingslashit(plugins_url('/', __FILE__)) );
-define( 'WPPB_PLUGIN_RESOURCE_URL', HR_PLUGIN_URL . 'resources' );
+define( 'WPPB_PLUGIN_RESOURCE_URL', WPPB_PLUGIN_URL . 'resources' );
 
 class WP_Plugin_Boilerplate {
 
