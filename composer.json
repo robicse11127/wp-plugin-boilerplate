@@ -11,6 +11,7 @@
     "autoload": {
         "psr-4": {
             "WPPB\\Admin\\": "admin/",
+            "WPPB\\Blocks\\": "blocks/",
             "WPPB\\Front\\": "public/"
         }
     }

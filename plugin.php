@@ -18,6 +18,7 @@ if( !defined( 'ABSPATH' ) ) exit();
 require_once 'vendor/autoload.php';
 use WPPB\Admin\Admin;
 use WPPB\Front\Front;
+use WPPB\Blocks\Blocks;
 
 
 /**
@@ -38,6 +39,7 @@ class WP_Plugin_Boilerplate {
     public function __construct() {
         $admin      = new Admin();
         $front      = new Front();
+        $bloc       = new Blocks();
     }
 
 }

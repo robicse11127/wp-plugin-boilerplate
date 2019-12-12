@@ -9,6 +9,8 @@ module.exports = function( grunt ) {
             admin_source: 'resources/admin/source/',
             public_dist: 'resources/public/dist/',
             public_source: 'resources/public/source/',
+            block_dist: 'resources/blocks/dist/',
+            block_source: 'blocks/',
         },
 
         // Minify all css files
@@ -24,6 +26,8 @@ module.exports = function( grunt ) {
                 
                     '<%= dirs.public_dist %>/css/public.css': '<%= dirs.public_source %>/css/public.css',
                     '<%= dirs.public_dist %>/css/public.min.css': '<%= dirs.public_dist %>/css/public.css',
+
+                    '<%= dirs.block_dist %>/css/block.min.css': '<%= dirs.block_source %>/**/css/*.css',
                 }
             }
         },
@@ -38,6 +42,14 @@ module.exports = function( grunt ) {
                     '<%= dirs.admin_dist %>/js/admin.min.js': [
                         '<%= dirs.admin_source %>/js/admin.js',
                     ],
+                    
+                    '<%= dirs.public_dist %>/js/public.min.js': [
+                        '<%= dirs.public_source %>/js/public.js',
+                    ],
+
+                    '<%= dirs.block_dist %>/js/block.min.js': [
+                        '<%= dirs.block_source %>/**/js/*.js',
+                    ],
                 }
             }
         },
@@ -45,7 +57,11 @@ module.exports = function( grunt ) {
         // Watching all changes
         watcher: {
             sass: {
-                files: ['<%= dirs.admin_source %>/css/**/*.css', '<%= dirs.public_source %>/css/**/*.css'],
+                files: [
+                    '<%= dirs.admin_source %>/css/**/*.css', 
+                    '<%= dirs.public_source %>/css/**/*.css',
+                    '<%= dirs.block_source %>/**/css/*.css',
+                ],
                 tasks: ['cssmin'],
                 livereload: {
                     options: {
@@ -54,7 +70,11 @@ module.exports = function( grunt ) {
                 }
             },
             scripts: {
-                files: ['<%= dirs.admin_source %>/js/*.js'],
+                files: [
+                    '<%= dirs.admin_source %>/js/*.js',
+                    '<%= dirs.public_source %>/js/*.js',
+                    '<%= dirs.block_source %>/**/js/*.js',
+                ],
                 tasks: ['uglify']
             }
         },

@@ -8,6 +8,6 @@ class HelloWorld {
      * @since 1.0.0
      */
     public function __construct() {
-        echo 'Hello Module';
+        // echo 'Hello Module';
     }
 }
