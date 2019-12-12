@@ -15,11 +15,18 @@
  * Text Domain:     wp-plugin-boilerplate
  */
 if( !defined( 'ABSPATH' ) ) exit();
+/**
+ * Require Autoloader
+ */
 require_once 'vendor/autoload.php';
+/**
+ * Require Helper Functions
+ */
+require_once 'helpers/helpers.php';
+
 use WPPB\Admin\Admin;
 use WPPB\Front\Front;
 use WPPB\Blocks\Blocks;
-
 
 /**
  * Define Plugin Constants
