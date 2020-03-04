@@ -24,6 +24,6 @@ class Blocks {
      * @since 1.0.0
      */
     public function register_script() {
-        wp_enqueue_script( 'wppb-block', WPPB_PLUGIN_RESOURCE_URL . '/blocks/dist/js/block.min.js', array('jquery'), rand(), true );
+        wp_enqueue_script( 'wppb-block', WPPB_PLUGIN_RESOURCE_URL . '/blocks/dist/js/blocks.min.js', array('jquery'), rand(), true );
     }
 }

@@ -32,30 +32,51 @@ module.exports = function( grunt ) {
             }
         },
 
+        // Convert into modern Javascript
+        babel: {
+            options: {
+                presets: ['@babel/preset-env']
+            },
+            dist: {
+                files: {
+                    '<%= dirs.admin_dist %>js/admin.js': [
+                        '<%= dirs.admin_source %>js/admin.js'
+                    ],
+                    '<%= dirs.public_dist %>js/public.js': [
+                        '<%= dirs.public_source %>js/public.js'
+                    ],
+                    '<%= dirs.block_dist %>/js/blocks.js': [
+                        '<%= dirs.block_source %>**/js/*.js'
+                    ],
+                }
+            }
+        },
+
         // Minify all js files
         uglify: {
             options: {
+                sourceMap: true,
                 mangle: false,
             },
             my_target: {
                 files: {
-                    '<%= dirs.admin_dist %>/js/admin.min.js': [
-                        '<%= dirs.admin_source %>/js/admin.js',
+                    '<%= dirs.admin_dist %>js/admin.min.js': [
+                        '<%= dirs.admin_dist %>js/*.js',
                     ],
                     
-                    '<%= dirs.public_dist %>/js/public.min.js': [
-                        '<%= dirs.public_source %>/js/public.js',
+                    '<%= dirs.public_dist %>js/public.min.js': [
+                        '<%= dirs.public_dist %>js/*.js',
                     ],
 
-                    '<%= dirs.block_dist %>/js/block.min.js': [
-                        '<%= dirs.block_source %>/**/js/*.js',
+                    '<%= dirs.block_dist %>js/blocks.min.js': [
+                        '<%= dirs.block_dist %>js/blocks.js',
                     ],
                 }
             }
         },
 
         // Watching all changes
-        watcher: {
+        watch: {
             sass: {
                 files: [
                     '<%= dirs.admin_source %>/css/**/*.css', 
@@ -168,14 +189,19 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-compress' );
     grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks( 'grunt-watcher' );
+    grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-babel' );
 
     grunt.registerTask( 'default', [
-        'minifycss', 'minifyjs', 'watcher'
+        'minifycss', 'babel', 'minifyjs', 'watch'
+    ]);
+
+    grunt.registerTask( 'babelify', [
+        'babel'
     ]);
 
     grunt.registerTask( 'dev', [
-        'watcher'
+        'watch'
     ]);
 
     grunt.registerTask( 'minifycss', [
@@ -188,6 +214,10 @@ module.exports = function( grunt ) {
 
     grunt.registerTask('release', [
         'makepot',
+    ]);
+
+    grunt.registerTask( 'textdomain', [
+        'addtextdomain'
     ]);
 
     grunt.registerTask( 'zip', [

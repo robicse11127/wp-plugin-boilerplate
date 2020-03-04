@@ -9,13 +9,17 @@ class Front {
      */
     public function __construct() {
 
-        /**
-         * Init Modules
-         */
+        // Load Hooks
+        $this->init_hooks();
+        
+    }
 
-        /**
-         * Loading Necessary Hooks
-         */
+    /**
+    * Init Hooks
+    * @author Rabiul
+    * @since 1.0.0
+    */
+    public function init_hooks() {
         add_action( 'wp_enqueue_scripts', array($this, 'front_styles_scripts') );
     }
 
