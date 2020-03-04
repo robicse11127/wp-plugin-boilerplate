@@ -133,7 +133,7 @@ module.exports = function( grunt ) {
             main: {
                 options: {
                     mode: 'zip',
-                    archive: './build/wp-plugin-boilerplate-v'+ pkg.version + '.zip'
+                    archive: './build/wp-plugin-boilerplate-v-'+ pkg.version + '.zip'
                 },
                 expand: true,
                 cwd: 'build/',
