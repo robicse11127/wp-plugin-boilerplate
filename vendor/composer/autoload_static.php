@@ -6,6 +6,11 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
 {
+    public static $files = array (
+        '90aa3d193da1b8bce842bab616d9ba95' => __DIR__ . '/../..' . '/installer.php',
+        '9c880ceb7a164e81cf4f2d9e765c4a7f' => __DIR__ . '/../..' . '/helpers/helpers.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
@@ -31,7 +36,7 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
     );
 
     public static $classMap = array (
-        'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/Admin.php',
+        'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/admin.php',
         'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => __DIR__ . '/../..' . '/admin/Modules/HelloWorld/HelloWorld.php',
         'WPPB\\Blocks\\Blocks' => __DIR__ . '/../..' . '/blocks/Blocks.php',
         'WPPB\\Blocks\\HelloBlock\\HelloBlock' => __DIR__ . '/../..' . '/blocks/HelloBlock/HelloBlock.php',

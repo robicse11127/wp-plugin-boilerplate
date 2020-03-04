@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WPPB\\Admin\\Admin' => $baseDir . '/admin/Admin.php',
+    'WPPB\\Admin\\Admin' => $baseDir . '/admin/admin.php',
     'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => $baseDir . '/admin/Modules/HelloWorld/HelloWorld.php',
     'WPPB\\Blocks\\Blocks' => $baseDir . '/blocks/Blocks.php',
     'WPPB\\Blocks\\HelloBlock\\HelloBlock' => $baseDir . '/blocks/HelloBlock/HelloBlock.php',

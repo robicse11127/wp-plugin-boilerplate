@@ -4,7 +4,7 @@
     "authors": [
         {
             "name": "Rabiul Islam",
-            "email": "robicse11127@gmail.com"
+            "email": "robizmailbox@gmail.com"
         }
     ],
     "require": {},
@@ -13,6 +13,7 @@
             "WPPB\\Admin\\": "admin/",
             "WPPB\\Blocks\\": "blocks/",
             "WPPB\\Front\\": "public/"
-        }
+        },
+        "files": [ "installer.php", "helpers/helpers.php" ]
     }
 }

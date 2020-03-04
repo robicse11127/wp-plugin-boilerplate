@@ -21,11 +21,6 @@ if( !defined( 'ABSPATH' ) ) exit(); // No Direct Access
  */
 require_once 'vendor/autoload.php';
 
-/**
- * Require Helper Functions
- */
-require_once 'helpers/helpers.php';
-
 use WPPB\Admin\Admin;
 use WPPB\Front\Front;
 use WPPB\Blocks\Blocks;
@@ -74,7 +69,7 @@ final class WP_Plugin_Boilerplate {
      * On Plugin Activation
      */
     public function activate() {
-        require_once WPPB_PLUGIN_PATH . '/installer.php';
+        //
     }
 
     /**
