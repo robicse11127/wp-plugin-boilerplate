@@ -94,6 +94,24 @@ module.exports = function( grunt ) {
             }
         },
 
+        // Generate Text Domain
+        addtextdomain: {
+            options: {
+                textdomain: 'wp-plugin-boilerplate',
+                updateDomains: ['wp-plugin-boilerplate']
+            },
+            target: {
+                files: {
+                    src: [
+                        '*.php',
+                        '**/*.php',
+                        '!node_modules/**',
+                        '!tests/**'
+                    ]
+                }
+            }
+        },
+
         // Clean up build directory
         clean: {
             main: ['build/']
