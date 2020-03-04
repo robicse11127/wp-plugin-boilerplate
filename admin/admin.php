@@ -14,7 +14,7 @@ class Admin {
         /**
          * Init Modules
          */
-        $hello = new HelloWorld();
+        new HelloWorld();
 
         /**
          * Init Hooks
