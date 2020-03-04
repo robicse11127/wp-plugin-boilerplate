@@ -9,7 +9,9 @@ class Front {
      */
     public function __construct() {
 
-        // Load Hooks
+        /**
+         * Init Hooks
+         */
         $this->init_hooks();
         
     }
