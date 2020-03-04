@@ -26,9 +26,9 @@ class Front {
      */
     public function front_styles_scripts() {
         // Styles
-        wp_enqueue_style( 'hr-public', WPPB_PLUGIN_RESOURCE_URL . '/public/dist/css/public.min.css', array(), rand() );
+        wp_enqueue_style( 'wppb-public', WPPB_PLUGIN_RESOURCE_URL . '/public/dist/css/public.min.css', array(), rand() );
 
         // Scripts
-        wp_enqueue_script( 'hr-public', WPPB_PLUGIN_RESOURCE_URL . '/public/dist/js/public.min.js', array('jquery'), rand(), true );
+        wp_enqueue_script( 'wppb-public', WPPB_PLUGIN_RESOURCE_URL . '/public/dist/js/public.min.js', array('jquery'), rand(), true );
     }
 }
