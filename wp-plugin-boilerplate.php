@@ -76,12 +76,9 @@ final class WP_Plugin_Boilerplate {
      * Plugin Init
      */
     public function init_plugin() {
-        if( is_admin() ) {
-            new Admin();
-            new Blocks();
-        }else {
-            new Front();
-        }
+        new Admin();
+        new Blocks();
+        new Front();
     }
 
 }

@@ -118,7 +118,7 @@ module.exports = function( grunt ) {
         // Generate Text Domain
         addtextdomain: {
             options: {
-                textdomain: 'wp-plugin-boilerplate',
+                textdomain: 'textdomain',
                 updateDomains: ['wp-plugin-boilerplate']
             },
             target: {

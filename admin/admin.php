@@ -10,16 +10,15 @@ class Admin {
      * @since 1.0.0
      */
     public function __construct() {
-
-        /**
-         * Init Modules
-         */
-        new HelloWorld();
-
         /**
          * Init Hooks
          */
         $this->init_hooks();
+
+        /**
+         * Init Modules
+         */
+        $this->init_modules();
     }
 
     /**
@@ -29,6 +28,16 @@ class Admin {
     */
     public function init_hooks() {
         add_action( 'admin_enqueue_scripts', array($this, 'admin_styles_scripts') );
+    }
+
+    /**
+    * Init Modules
+    * @author Rabiul
+    * @since 1.0.0
+    */
+    public function init_modules() {
+        // Init modules here
+        new HelloWorld();
     }
 
     /**

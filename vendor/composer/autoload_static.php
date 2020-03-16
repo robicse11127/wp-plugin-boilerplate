@@ -37,6 +37,8 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
 
     public static $classMap = array (
         'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/admin.php',
+        'WPPB\\Admin\\Modules\\Book\\Book' => __DIR__ . '/../..' . '/admin/Modules/Book/Book.php',
+        'WPPB\\Admin\\Modules\\Book\\PostType' => __DIR__ . '/../..' . '/admin/Modules/Book/PostType.php',
         'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => __DIR__ . '/../..' . '/admin/Modules/HelloWorld/HelloWorld.php',
         'WPPB\\Blocks\\Blocks' => __DIR__ . '/../..' . '/blocks/Blocks.php',
         'WPPB\\Blocks\\HelloBlock\\HelloBlock' => __DIR__ . '/../..' . '/blocks/HelloBlock/HelloBlock.php',
