@@ -15,6 +15,7 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
         'W' => 
         array (
             'WPPB\\Front\\' => 11,
+            'WPPB\\Elementor\\' => 15,
             'WPPB\\Blocks\\' => 12,
             'WPPB\\Admin\\' => 11,
         ),
@@ -24,6 +25,10 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
         'WPPB\\Front\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public',
+        ),
+        'WPPB\\Elementor\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/elementor',
         ),
         'WPPB\\Blocks\\' => 
         array (
@@ -36,9 +41,7 @@ class ComposerStaticInit843479b9054b7a1257ddc90a55d9f890
     );
 
     public static $classMap = array (
-        'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/admin.php',
-        'WPPB\\Admin\\Modules\\Book\\Book' => __DIR__ . '/../..' . '/admin/Modules/Book/Book.php',
-        'WPPB\\Admin\\Modules\\Book\\PostType' => __DIR__ . '/../..' . '/admin/Modules/Book/PostType.php',
+        'WPPB\\Admin\\Admin' => __DIR__ . '/../..' . '/admin/Admin.php',
         'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => __DIR__ . '/../..' . '/admin/Modules/HelloWorld/HelloWorld.php',
         'WPPB\\Blocks\\Blocks' => __DIR__ . '/../..' . '/blocks/Blocks.php',
         'WPPB\\Blocks\\HelloBlock\\HelloBlock' => __DIR__ . '/../..' . '/blocks/HelloBlock/HelloBlock.php',

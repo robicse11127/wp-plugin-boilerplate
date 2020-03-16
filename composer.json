@@ -12,6 +12,7 @@
         "psr-4": {
             "WPPB\\Admin\\": "admin/",
             "WPPB\\Blocks\\": "blocks/",
+            "WPPB\\Elementor\\": "elementor/",
             "WPPB\\Front\\": "public/"
         },
         "files": [ "installer.php", "helpers/helpers.php" ]
