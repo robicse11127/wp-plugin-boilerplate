@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'WPPB\\Front\\' => array($baseDir . '/public'),
-    'WPPB\\Elementor\\' => array($baseDir . '/elementor'),
+    'WPPB\\Elementor\\' => array($baseDir . '/elementor_extension'),
     'WPPB\\Blocks\\' => array($baseDir . '/blocks'),
     'WPPB\\Admin\\' => array($baseDir . '/admin'),
 );

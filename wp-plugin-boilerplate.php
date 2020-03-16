@@ -24,6 +24,7 @@ require_once 'vendor/autoload.php';
 use WPPB\Admin\Admin;
 use WPPB\Front\Front;
 use WPPB\Blocks\Blocks;
+use WPPB\Elementor\Elementor_Extension;
 
 final class WP_Plugin_Boilerplate {
 
@@ -78,6 +79,7 @@ final class WP_Plugin_Boilerplate {
     public function init_plugin() {
         new Admin();
         new Blocks();
+        new Elementor_Extension();
         new Front();
     }
 
