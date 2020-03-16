@@ -141,29 +141,12 @@ module.exports = function( grunt ) {
         // Copy the plugin into the build directory
         copy: {
             main: {
-                src: [
-                    '**',
-                    '!node_modules/**',
-                    '!build/**',
-                    '!bin/**',
-                    '!.git/**',
-                    '!Gruntfile.js',
-                    '!package.json',
-                    '!debug.log',
-                    '!phpunit.xml',
-                    '!.gitignore',
-                    '!.gitmodules',
-                    '!npm-debug.log',
-                    '!assets/less/**',
-                    '!tests/**',
-                    '!**/Gruntfile.js',
-                    '!**/package.json',
-                    '!**/package-lock.json',
-                    '!**/README.md',
-                    '!**/export.sh',
-                    '!**/*~'
-                ],
-                dest: 'build/'
+                files: [
+                    {
+                        src: [],
+                        dest: ''
+                    }
+                ]
             }
         },
 
@@ -218,6 +201,10 @@ module.exports = function( grunt ) {
 
     grunt.registerTask( 'textdomain', [
         'addtextdomain'
+    ]);
+
+    grunt.registerTask( 'cleanit', [
+        'clean'
     ]);
 
     grunt.registerTask( 'zip', [
