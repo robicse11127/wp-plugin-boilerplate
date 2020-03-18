@@ -79,7 +79,6 @@ final class WP_Plugin_Boilerplate {
     public function init_plugin() {
         new Admin();
         new Blocks();
-        new Elementor_Extension();
         new Front();
     }
 
