@@ -1,6 +1,8 @@
 <?php 
 namespace WPPB\Elementor;
 
+use WPPB\Elementor\Widgets\TextWidget;
+
 if( !defined( 'ABSPATH' ) ) : exit(); endif; // NO direct access allowed
 
 /**
@@ -141,10 +143,10 @@ final class Elementor_Extension {
 	public function init_widgets() {
 
 		// Include Widget files
-		// require_once( __DIR__ . '/widgets/test-widget.php' );
+		require_once( WPPB_PLUGIN_PATH . '/elementor_extension/Widgets/TextWidget.php' );
 
 		// Register widget
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \WPPB\Elementor\Widgets\TextWidget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new TextWidget() );
 
 	}
 	

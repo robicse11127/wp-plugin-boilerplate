@@ -1,5 +1,5 @@
 # WordPress Plugin Boilerplate
-WordPress plugin development boilerplate for the scallable and maintainable plugin development. You can develope <code>Gutenberg Block</code> and <code>Elementor Custom Widgets</code> as well.
+WordPress plugin development boilerplate for the scallable and maintainable plugin development.
 
 # How to use it
 Clone the repo and run <code>npm install</code> to install all node pakcage manager dependencies. 
