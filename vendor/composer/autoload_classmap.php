@@ -10,7 +10,5 @@ return array(
     'WPPB\\Admin\\Modules\\HelloWorld\\HelloWorld' => $baseDir . '/admin/Modules/HelloWorld/HelloWorld.php',
     'WPPB\\Blocks\\Blocks' => $baseDir . '/blocks/Blocks.php',
     'WPPB\\Blocks\\HelloBlock\\HelloBlock' => $baseDir . '/blocks/HelloBlock/HelloBlock.php',
-    'WPPB\\Elementor\\Elementor_Extension' => $baseDir . '/elementor_extension/Elementor_Extension.php',
-    'WPPB\\Elementor\\Widgets\\TextWidget' => $baseDir . '/elementor_extension/Widgets/TextWidget.php',
     'WPPB\\Front\\Front' => $baseDir . '/public/Front.php',
 );

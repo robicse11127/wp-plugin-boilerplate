@@ -141,12 +141,29 @@ module.exports = function( grunt ) {
         // Copy the plugin into the build directory
         copy: {
             main: {
-                files: [
-                    {
-                        src: [],
-                        dest: ''
-                    }
-                ]
+                src: [
+                    '**',
+                    '!node_modules/**',
+                    '!build/**',
+                    '!bin/**',
+                    '!.git/**',
+                    '!Gruntfile.js',
+                    '!package.json',
+                    '!debug.log',
+                    '!phpunit.xml',
+                    '!.gitignore',
+                    '!.gitmodules',
+                    '!npm-debug.log',
+                    '!assets/less/**',
+                    '!tests/**',
+                    '!**/Gruntfile.js',
+                    '!**/package.json',
+                    '!**/package-lock.json',
+                    '!**/README.md',
+                    '!**/export.sh',
+                    '!**/*~'
+                ],
+                dest: 'build/'
             }
         },
 
